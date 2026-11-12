@@ -1,0 +1,102 @@
+[
+    {
+        "id": "MED001",
+        "title": "Laskar Pelangi",
+        "creator": "Andrea Hirata",
+        "category": "Novel",
+        "stock": 5,
+        "description": "Novel tentang pendidikan dan perjuangan anak-anak Belitung dalam meraih cita-cita.",
+        "type": "Buku",
+        "image_url": "https:\/\/covers.openlibrary.org\/b\/isbn\/9789793062792-L.jpg"
+    },
+    {
+        "id": "MED002",
+        "title": "Atomic Habits",
+        "creator": "James Clear",
+        "category": "Pengembangan Diri",
+        "stock": 3,
+        "description": "Panduan membangun kebiasaan baik melalui perubahan kecil yang konsisten.",
+        "type": "Buku",
+        "image_url": "https:\/\/covers.openlibrary.org\/b\/isbn\/9780735211292-L.jpg"
+    },
+    {
+        "id": "MED003",
+        "title": "Clean Code",
+        "creator": "Robert C. Martin",
+        "category": "Teknologi",
+        "stock": 2,
+        "description": "Panduan menulis kode program yang bersih, mudah dibaca, dan mudah dirawat.",
+        "type": "Buku",
+        "image_url": "https:\/\/covers.openlibrary.org\/b\/isbn\/9780132350884-L.jpg"
+    },
+    {
+        "id": "MED004",
+        "title": "The Hobbit",
+        "creator": "J.R.R. Tolkien",
+        "category": "Fantasi",
+        "stock": 4,
+        "description": "Petualangan Bilbo Baggins dalam perjalanan menemukan harta karun.",
+        "type": "Buku",
+        "image_url": "https:\/\/covers.openlibrary.org\/b\/isbn\/9780547928227-L.jpg"
+    },
+    {
+        "id": "MED005",
+        "title": "The Alchemist",
+        "creator": "Paulo Coelho",
+        "category": "Fiksi",
+        "stock": 3,
+        "description": "Kisah perjalanan seorang penggembala mencari makna mimpi dan tujuan hidup.",
+        "type": "Buku",
+        "image_url": "https:\/\/covers.openlibrary.org\/b\/isbn\/9780062315007-L.jpg"
+    },
+    {
+        "id": "MED006",
+        "title": "The Social Network",
+        "creator": "David Fincher",
+        "category": "Drama",
+        "stock": 4,
+        "description": "Film tentang perjalanan Mark Zuckerberg membangun jejaring sosial Facebook.",
+        "type": "Film",
+        "image_url": "https:\/\/image.tmdb.org\/t\/p\/w500\/n0ybibhJtQ5icDqTp8eRytcIHJx.jpg"
+    },
+    {
+        "id": "MED007",
+        "title": "Inception",
+        "creator": "Christopher Nolan",
+        "category": "Sci-Fi",
+        "stock": 5,
+        "description": "Film tentang pencurian informasi melalui dunia mimpi.",
+        "type": "Film",
+        "image_url": "https:\/\/image.tmdb.org\/t\/p\/w500\/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg"
+    },
+    {
+        "id": "MED008",
+        "title": "Interstellar",
+        "creator": "Christopher Nolan",
+        "category": "Sci-Fi",
+        "stock": 3,
+        "description": "Perjalanan sekelompok penjelajah mencari tempat tinggal baru bagi manusia.",
+        "type": "Film",
+        "image_url": "https:\/\/image.tmdb.org\/t\/p\/w500\/gEU2QniE6E77NI6lCU6MPost.jpg"
+    },
+    {
+        "id": "MED009",
+        "title": "The Dark Knight",
+        "creator": "Christopher Nolan",
+        "category": "Action",
+        "stock": 4,
+        "description": "Batman menghadapi ancaman Joker yang mengacaukan kota Gotham.",
+        "type": "Film",
+        "image_url": "https:\/\/image.tmdb.org\/t\/p\/w500\/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+    },
+    {
+        "id": "MED010",
+        "title": "Parasite",
+        "creator": "Bong Joon-ho",
+        "category": "Thriller",
+        "stock": 1,
+        "description": "Kisah dua keluarga dari latar belakang sosial yang berbeda.",
+        "type": "Film",
+        "image_url": "https:\/\/image.tmdb.org\/t\/p\/w500\/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg"
+    }
+]

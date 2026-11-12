@@ -1,0 +1,20 @@
+[
+    {
+        "id": "TRX6af5c5515d8cb",
+        "user_id": "USR6af5c54311280",
+        "media_id": "MED001",
+        "media_title": "Laskar Pelangi",
+        "borrowed_at": "2026-11-12",
+        "due_at": "2026-11-19",
+        "status": "Dikembalikan"
+    },
+    {
+        "id": "TRX6af5c5d135309",
+        "user_id": "USR6af5c54311280",
+        "media_id": "MED010",
+        "media_title": "Parasite",
+        "borrowed_at": "2026-11-12",
+        "due_at": "2026-11-19",
+        "status": "Dipinjam"
+    }
+]
