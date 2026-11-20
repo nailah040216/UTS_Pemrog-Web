@@ -3,6 +3,7 @@ use App\Models\Media;
 
 /** @var ?array $user */
 /** @var Media[] $items */
+/** @var Media[] $allItems */
 
 function e(string $value): string
 {
@@ -45,7 +46,7 @@ function e(string $value): string
 
             <form method="post">
                 <input type="hidden" name="action" value="logout">
-                <button class="btn btn-outline btn-small">Keluar</button>
+                <button type="submit" class="btn btn-outline btn-small">Keluar</button>
             </form>
         <?php else: ?>
             <a class="btn btn-outline btn-small" href="index.php?page=login">
@@ -108,7 +109,7 @@ function e(string $value): string
                         placeholder="Masukkan password">
                 </label>
 
-                <button class="btn btn-primary btn-full">
+                <button type="submit" class="btn btn-primary btn-full">
                     <?= $page === 'login' ? 'Masuk' : 'Daftar sekarang' ?>
                 </button>
 
@@ -328,7 +329,7 @@ function e(string $value): string
                                 <input type="hidden" name="media_id"
                                     value="<?= e($m->getId()) ?>">
 
-                                <button class="btn btn-primary btn-small">
+                                <button type="submit" class="btn btn-primary btn-small">
                                     Pinjam
                                 </button>
 
@@ -343,7 +344,7 @@ function e(string $value): string
 
                         <?php else: ?>
 
-                            <button class="btn btn-disabled btn-small" disabled>
+                            <button type="button" class="btn btn-disabled btn-small" disabled>
                                 Stok habis
                             </button>
 
@@ -434,7 +435,7 @@ function e(string $value): string
                 >
             </label>
 
-            <button class="btn btn-primary">Simpan media</button>
+            <button type="submit" class="btn btn-primary">Simpan media</button>
 
         </form>
 
@@ -443,7 +444,7 @@ function e(string $value): string
 
             <h3>Daftar media</h3>
 
-            <?php foreach ($this->media->all() as $m): ?>
+            <?php foreach ($allItems as $m): ?>
 
                 <div class="manage-edit-form">
 
@@ -582,6 +583,9 @@ function e(string $value): string
             <thead>
                 <tr>
                     <th>Media</th>
+                    <?php if ($user['role'] === 'admin'): ?>
+                        <th>Peminjam</th>
+                    <?php endif; ?>
                     <th>Tanggal pinjam</th>
                     <th>Batas kembali</th>
                     <th>Status</th>
@@ -591,13 +595,27 @@ function e(string $value): string
 
             <tbody>
 
-                <?php foreach ($myLoans as $loan): $d = $loan->toArray(); ?>
+                <?php foreach ($myLoans as $loan):
+                    $d = $loan->toArray();
+                    $isOverdue = $loan->getStatus() === 'Dipinjam' && strtotime($d['due_at']) < time();
+                ?>
 
                     <tr>
 
                         <td><b><?= e($d['media_title']) ?></b></td>
+
+                        <?php if ($user['role'] === 'admin'): ?>
+                            <td><?= e($d['user_name'] ?? $d['user_id']) ?></td>
+                        <?php endif; ?>
+
                         <td><?= e($d['borrowed_at']) ?></td>
-                        <td><?= e($d['due_at']) ?></td>
+
+                        <td>
+                            <?= e($d['due_at']) ?>
+                            <?php if ($isOverdue): ?>
+                                <small style="color: #dc2626; font-weight: 600;">(Terlambat)</small>
+                            <?php endif; ?>
+                        </td>
 
                         <td>
                             <span class="status <?= $loan->getStatus() === 'Dipinjam' ? 'status-active' : 'status-done' ?>">
@@ -609,14 +627,15 @@ function e(string $value): string
 
                             <?php if ($loan->getStatus() === 'Dipinjam'): ?>
 
-                                <form method="post">
+                                <form method="post"
+                                    onsubmit="return confirm('Kembalikan media ini sekarang?')">
 
                                     <input type="hidden" name="action" value="return">
 
                                     <input type="hidden" name="loan_id"
                                         value="<?= e($loan->getId()) ?>">
 
-                                    <button class="btn btn-outline btn-small">
+                                    <button type="submit" class="btn btn-outline btn-small">
                                         Kembalikan
                                     </button>
 
@@ -635,7 +654,7 @@ function e(string $value): string
 
                 <?php if (!$myLoans): ?>
                     <tr>
-                        <td colspan="5" class="empty">
+                        <td colspan="<?= $user['role'] === 'admin' ? '6' : '5' ?>" class="empty">
                             Belum ada transaksi.
                         </td>
                     </tr>

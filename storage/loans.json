@@ -15,6 +15,33 @@
         "media_title": "Parasite",
         "borrowed_at": "2026-11-12",
         "due_at": "2026-11-19",
+        "status": "Dikembalikan"
+    },
+    {
+        "id": "TRX6b00374fc2c6a",
+        "user_id": "USR6b00371a7b334",
+        "media_id": "MED001",
+        "media_title": "Laskar Pelangi",
+        "borrowed_at": "2026-11-20",
+        "due_at": "2026-11-27",
+        "status": "Dikembalikan"
+    },
+    {
+        "id": "TRX6b00376e43a81",
+        "user_id": "USR6b00371a7b334",
+        "media_id": "MED010",
+        "media_title": "Parasite",
+        "borrowed_at": "2026-11-20",
+        "due_at": "2026-11-27",
+        "status": "Dipinjam"
+    },
+    {
+        "id": "TRX6b0039a625dad",
+        "user_id": "USR001",
+        "media_id": "MED6b00398b51070",
+        "media_title": "Ketika Cinta Bertasbih",
+        "borrowed_at": "2026-11-20",
+        "due_at": "2026-11-27",
         "status": "Dipinjam"
     }
 ]
